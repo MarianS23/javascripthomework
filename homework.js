@@ -173,22 +173,25 @@ if (dayTime >=23 && dayTime <5){
 }
 
 
-switch (true){                       
-	case dayTime >=23 || dayTime<5:    
-	console.log("доброї ночі");
+
+перероблений варіант
+switch(true){
+	case dayTime== 23 || dayTime == 24 || dayTime ==1 || dayTime ==2 || dayTime ==3 || dayTime == 4 || dayTime ==5 :
+	console.log("good night");
 	break;
-	case dayTime >=5 || dayTime<11:
-	console.log("доброго ранку");
+	case dayTime == 6 || dayTime == 7 || dayTime == 8 || dayTime == 9 || dayTime ==10 || dayTime == 11:
+	console.log("good morning");
 	break;
-	case dayTime >=11 || dayTime<17:
-	console.log("доброго дня");
+	case dayTime == 12 || dayTime == 13 || dayTime == 14 || dayTime == 15 || dayTime == 16 || dayTime == 17:
+	console.log("good day");
 	break;
-	case dayTime >=17 || dayTime<23:
-	console.log("доброго вечора");
+	case dayTime == 18 || dayTime ==19 || dayTime ==20 || dayTime==21 || dayTime==22 || dayTime==23:
+	console.log("good evening");
 	break;
 	default:
-	console.log("ніт");
-}
+	console.log("nit");
+};
+
 
 
 
