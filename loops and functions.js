@@ -87,7 +87,7 @@ function showLastElem(arr,lastElem){
 	return (lastElem == null)?arr.pop():arr.slice(-lastElem);
 };
 
-//task 9
+//task 8
 function changeFirsLetter (str){
 	let array = str.slice(" ");
 	let newArray = [];
