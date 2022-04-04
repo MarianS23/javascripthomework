@@ -92,7 +92,7 @@ function changeFirsLetter (str){
 	let array = str.slice(" ");
 	let newArray = [];
 	 for(let i = 0;array.length;i++){
-		newArray.push();
+		newArray.push(array[i].charAt(0).toUpperCase()+array[i].slice(1));
 	 };
 	return newArray.join(" ")
 };
