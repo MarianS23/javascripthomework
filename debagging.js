@@ -1,16 +1,23 @@
 //task 1
 function calcRectangleArea(w,h){
-	let s = (w*h)*0.5;
-	return s;
-}
-
-let h = +prompt("enter height");
-let w = +prompt("enter width");
-if(isNaN(w)||isNaN(h)){
-	alert("you enter not a Number")
-}else {
-	alert(calcRectangleArea(w,h))
+      if(isNaN(w)||isNaN(h)){
+	     alert("you enter NaN")
+	     throw new Error("user enter NaN")
+      }else {
+	     return (w*h)*0.5;
+      };
 };
+
+let w = +prompt("enter width");
+let h = +prompt("enter height");
+    try{
+          calcRectangleArea(w,h)
+    }catch(error){
+          console.log(error.name);
+	  console.log(error.message);
+	  console.log(error.stack);
+};  
+
 
 
 
