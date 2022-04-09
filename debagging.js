@@ -43,3 +43,46 @@ try{
 	console.log(error.message);
 	console.log(error.stack);
 }	
+
+
+
+
+//task 4
+function showUser(id){
+	if(id<0){
+		throw new Error(`you enter inccorect number ${id}`)
+	}
+	return {id:id};
+}
+
+
+
+
+function showUsers(ids) {
+	let result = [];
+	for(let i = 0;i<ids.length;i++){
+	     try{showUser(ids[i])                              //має провірити ітерацію функцією
+             result.push(showUser(ids[i]))                 //має записати ітерацію в масив 
+	     }catch(error){
+	  	console.log(error.message);
+	  }
+	}
+	   
+	
+	return result;
+}
+
+
+
+function showUsers(ids){
+	let result =[];
+	ids.forEach(function(id){
+		try{
+			let person = showUser(id);
+			result.push(person);
+			}catch(error){
+				console.log(error.message)
+			}
+	})
+	return result
+}
