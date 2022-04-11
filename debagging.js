@@ -1,4 +1,4 @@
-//task 1
+//TASK 1
 function calcRectangleArea(w,h){
       if(isNaN(w)||isNaN(h)){
 	     alert("you enter NaN")
@@ -21,7 +21,7 @@ let h = +prompt("enter height");
 
 
 
-//task 2
+//TASK 2
 function getUserAge() {
 	let age = prompt("enter your age");
 	if(!age){
@@ -45,9 +45,38 @@ try{
 }	
 
 
+//TASK 3
+class MonthException {
+	constructor(message){
+		this.message = message;
+		this.name = 'MonthException';
+	}
+}
+
+function showMonthName(month) {
+	month = month - 1;
+    let months = ["jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+    if(months[month] !== undefined){
+    	return months[month];
+    }else {
+    	throw new MonthException("inccorect month number");
+    }
+}
+
+try{
+	let userChoise = 6;
+	let monthName = showMonthName(userChoise);
+	console.log(monthName);
+}catch(error){
+	console.log(error.name,error.message);
+}
 
 
-//task 4
+
+
+
+
+//TASK 4 
 function showUser(id){
 	if(id<0){
 		throw new Error(`you enter inccorect number ${id}`)
@@ -61,15 +90,14 @@ function showUser(id){
 function showUsers(ids) {
 	let result = [];
 	for(let i = 0;i<ids.length;i++){
-	     try{showUser(ids[i])                              //має провірити ітерацію функцією
-             result.push(showUser(ids[i]))                 //має записати ітерацію в масив 
+	     try{
+		showUser(ids[i])                              
+                result.push(showUser(ids[i]))                
 	     }catch(error){
 	  	console.log(error.message);
-	  }
+	     }
 	}
-	   
-	
-	return result;
+	  return result;
 }
 
 
