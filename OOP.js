@@ -22,7 +22,7 @@ function showProps(obj){
 	let myArray = Object.entries(obj);
 	return myArray;
 };
-console.log(showProps(myObj)
+console.log(showProps(myObj));
 
 
 //task 3      ще доробляю!!
