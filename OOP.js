@@ -19,10 +19,10 @@ let myObj = new CreatesObject(1,2,3,4,5);
 
 
 function showProps(obj){
-	let myArray = Object.values(obj);
+	let myArray = Object.entries(obj);
 	return myArray;
 };
-
+console.log(showProps(myObj)
 
 
 //task 3      ще доробляю!!
