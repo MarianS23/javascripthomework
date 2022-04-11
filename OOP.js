@@ -33,7 +33,7 @@ class Person{
 		this.surname = surname;	
 	}
 	showFullName(){
-		//return this.name + " "+ this.surname  не правильно
+		//return this.name + " "+ this.surname  гірший варіант
 		return `${this.name} ${this.surname}`
 	}
 }
