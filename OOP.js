@@ -25,7 +25,7 @@ function showProps(obj){
 console.log(showProps(myObj));
 
 
-//task 3      ще доробляю!!
+//task 3     
 
 class Person{
 	constructor(name,surname){
@@ -33,7 +33,27 @@ class Person{
 		this.surname = surname;	
 	}
 	showFullName(){
-		//return this.name + " "+ this.surname  гірший варіант
 		return `${this.name} ${this.surname}`
 	}
 }
+
+class Student extends Person {
+	constructor(name,surname,year){
+		super(name,surname)
+		this.year = year;
+	}
+	showFullName(midleName){
+		return super.showFullName() +" "+midleName;
+
+	}
+	showCours(){
+		let currentYear = new Date().getFullYear();
+		let result = currentYear - this.year;
+		if(result >6){
+			alert("you are not student anymore")
+			return;
+		}else {
+		    return result;
+	    }
+	}
+};
