@@ -89,7 +89,7 @@ function showLastElem(arr,lastElem){
 
 //task 8
 function changeFirsLetter (str){
-	let array = str.slice(" ");
+	let array = str.split(" ");
 	let newArray = [];
 	 for(let i = 0;array.length;i++){
 		newArray.push(array[i].charAt(0).toUpperCase()+array[i].slice(1));
