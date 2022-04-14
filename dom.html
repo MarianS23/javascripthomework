@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+  
+  
+  //TASK 1
+  
+	<div id="test">
+		first
+	</div>
+	<script>
+		console.log(document.getElementById("test").innertHTML = "Last")
+		console.log(document.firstChild.innertHTML = "Last")
+		console.log(document.getElementsByTagName('div').innertHTML = "Last")
+		console.log(document.body.childNodes[0].innerHTML = "Last");
+		
+	</script>
+  
+  
+  //TASK2
+  <img class="image" src="dog.jpg">
+    <script>
+       let chngedMeening = document.getElementsByClassName("image").src = "cat.jpg";
+       alert(chngedMeening);
+       let img  = document.getElementsByTagName("img")[0];
+       alert(img);
+    </script>
+  
+  
+  //TASK3
+  
+	
+</body>
+</html>
