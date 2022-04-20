@@ -129,3 +129,65 @@ newWorker2.showSalaryWithExperience();
 newWorker2.sortSalary(workersList);
 
 let newWorker3 = new Worker("Stepan Step",20,26);
+
+
+//TASK 5
+class GeometrickFigure {
+	getArea(){
+		return 0;
+	}
+	toString(){
+		return Object.getPrototypeOf(this).constructor.name;
+	}
+
+}
+
+
+class Triangle extends GeometrickFigure{
+    constructor(width,height){
+    	super();
+    	this.width = width;
+    	this.height = height;
+    }
+    getArea(){
+            return (this.width * this.height)/2;
+    	}  
+}
+
+class Square extends GeometrickFigure{
+	constructor(side){
+		super();
+		this.side = side;
+	}
+	getArea(){
+		return this.side ** 2 ;
+	}
+}
+
+class Circle extends GeometrickFigure{
+	constructor(radius){
+		super();
+		this.radius = radius;
+	}
+	getArea(){
+		return Math.PI * this.radius ** 2;
+	}
+}
+
+
+function handleFigure(figures){
+	return figures.reduce(function(sum,figure){
+		if(figure instanceof GeometrickFigure){
+			console.log(`Geometrick figure: ${figure.toString()}-area:${figure.getArea()}`)
+			return sum+figure.getArea();
+		}else{
+			console.log("you enter incorrect data")
+		}
+
+	},0);
+}
+
+
+let figure = [new Triangle(10,14),new Square(7),new Circle(4)];
+
+console.log(handleFigure(figure));
