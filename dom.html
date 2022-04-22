@@ -30,9 +30,71 @@
        let img  = document.getElementsByTagName("img")[0];
        alert(img);
     </script>
+	
+	
+	
+  //TASK 3
+	<h2>Article header</h2>  
+
+      <div id="text">
+
+        <p>First paragraph</p>
+        <p>Second paragraph</p>
+        <p>Third paragraph</p>
+
+      </div>
+
+	<p>Another text</p>
+    
+    <script>
+    	let a = document.querySelectorAll("#text p");
+
+    	for(let i = 0;i<a.length;i++){
+	        console.log(`Selector text ${i} : ${a[i].innerHTML}`)
+    	}
+
+    </script>
+	
+	
   
-  
-  //TASK3
+  //TASK 4
+	    <ul id="List"><li>111111</li><li>2222222</li><li>333333333</li><li>4444444</li><li>5555555</li></ul>
+
+    <script>
+    	
+    	let parents = document.getElementById("List");
+    	let firstElem = parents.childNodes[0].innerHTML;
+    	let lastElem = parents.childNodes[4].innerHTML;
+    	let secondElem = parents.childNodes[1].innerHTML;
+    	let fourthElem = parents.childNodes[3].innerHTML;
+    	let thirdElem = parents.childNodes[2].innerHTML;
+
+
+    	let firstElem = document.getElementById("List").firstChild.innerHTML;
+    	let lastElem = document.getElementById("List").lastChild.innerHTML;
+    	let secondElem = document.getElementById("List").firstChild.nextSibling.innerHTML;
+    	let fourthElem = document.getElementById("List").lastChild.previousSibling.innerHTML;
+    	let thirdElem = document.getElementById("List").firstChild.nextSibling.nextSibling.innerHTML;
+
+
+    	let firstElem = document.getElementById("List").children[0].innerHTML;
+    	let lastElem = document.getElementById("List").children[4].innerHTML;           
+    	let secondElem = document.getElementById("List").children[1].innerHTML;
+    	let fourthElem = document.getElementById("List").children[3].innerHTML;
+    	let thirdElem = document.getElementById("List").children[2].innerHTML;
+
+
+    	alert(firstElem)
+    	alert(lastElem)
+    	alert(secondElem)
+    	alert(fourthElem)
+    	alert(thirdElem)
+
+    </script>
+	
+	
+//TASK 5
+   
   
 	
 </body>
