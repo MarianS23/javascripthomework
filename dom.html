@@ -8,7 +8,7 @@
 <body>
   
   
-  //TASK 1
+//TASK 1
   
 	<div id="test">
 		first
@@ -22,7 +22,7 @@
 	</script>
   
   
-  //TASK2
+//TASK2
   <img class="image" src="dog.jpg">
     <script>
        let chngedMeening = document.getElementsByClassName("image").src = "cat.jpg";
@@ -33,7 +33,7 @@
 	
 	
 	
-  //TASK 3
+//TASK 3
 	<h2>Article header</h2>  
 
       <div id="text">
@@ -57,7 +57,7 @@
 	
 	
   
-  //TASK 4
+//TASK 4
 	    <ul id="List"><li>111111</li><li>2222222</li><li>333333333</li><li>4444444</li><li>5555555</li></ul>
 
     <script>
@@ -92,7 +92,6 @@
 
     </script>
 	
-	
 //TASK 5
    <h1>I'am a big header!!!</h1>
         <div id="myDiv">
@@ -122,8 +121,33 @@
 	      document.getElementsByTagName("span")[0].style.display = "none";
 	  </script>
 	
-	//TASK 6
-	//TASK 7
+//TASK 6
+	<input type="text" id="input1" value="Text1">
+       <input type="text" id="input2" value="Text2">
+       
+       <form>
+       <input type="button" id="buttonV" value="press to replacement">
+       </form>
+
+
+       <script>
+       	let a1 = prompt("enter first value");
+       	let b1 = prompt("enter second value");
+       	let a = document.getElementById("input1").value = a1;
+       	let b = document.getElementById("input2").value = b1;
+
+        
+        const button = document.getElementById("buttonV")
+        button.addEventListener("click",replaceFunc);
+        function replaceFunc(){
+        	if(button.value === "press to replacement"){
+             document.getElementById("input1").value = b1;
+             document.getElementById("input2").value = a1;
+        	}
+        }
+
+       </script>
+//TASK 7
 	<script>
  	   document.body.innerHTML = `
 	                <main class="mainClass check item"> 	
