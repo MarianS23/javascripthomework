@@ -94,7 +94,45 @@
 	
 	
 //TASK 5
-   
+   <h1>I'am a big header!!!</h1>
+        <div id="myDiv">
+            <p>First paragraph</p>
+            <p>Second paragraph</p>
+            <p>Third paragraph</p>
+            <p>Fourth paragraph</p>
+        </div>
+        <ul id="myList">
+            <li>Make</li>
+            <li>me</li>
+            <li>horizontal!</li>
+        </ul>
+        <span>Make me invisible, please!</span>
+	  
+	  <script>
+
+	  	  document.getElementsByTagName("h1")[0].style.backgroundColor = "green";  //або
+	      document.body.children[0].style.backgroundColor = "green";
+
+	      document.getElementById("myDiv").children[0].style.fontWeight = "700";
+	      document.getElementById("myDiv").children[1].style.color = "red";
+	      document.getElementById("myDiv").children[2].style.textDecoration = "underline";
+	      document.getElementById("myDiv").children[3].style.fontStyle = "italic";
+	      document.getElementById("myList").style.listStyle = "none";
+	      document.getElementById("myList").style.display = "flex";
+	      document.getElementsByTagName("span")[0].style.display = "none";
+	  </script>
+	
+	//TASK 6
+	//TASK 7
+	<script>
+ 	   document.body.innerHTML = `
+	                <main class="mainClass check item"> 	
+		           <div id="myDiv">
+                             <p>First paragraph</p>           
+                           </div>
+                        </main> 
+                        `
+        </script>
   
 	
 </body>
