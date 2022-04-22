@@ -57,6 +57,14 @@ let str = "Java Script";
 let first = str.replace("Script" ,"Java");
 let second = first.replace("Java","Script");
 
+//переробив з використанням регулярки!
+
+let regExp = /(\w+)\s(\w+)/;
+let str = "Java Script";
+let newStr = str.replace(regExp, `$2, $1`);
+
+console.log(newStr);
+
 
 
 //TASK 5 
@@ -68,6 +76,9 @@ let num3 = "9999-99999999-9999"
 
 function checkBangId(number){
 	let regExp = /^\d\d\d\d-\d\d\d\d-\d\d\d\d-\d\d\d\d$/
+	                                                                
+	let regExp = /^\d{4}-\d{4}-\d{4}-\d{4}$/            //коротший запис регулярного виразу 
+	
 	if(regExp.test(number) == true){
 		return "number confirmed";
 	}else{
