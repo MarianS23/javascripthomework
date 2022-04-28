@@ -105,3 +105,6 @@ console.log(checkEmail("sdf_sssef-af2312@gmail.com"));  // correct
 console.log(checkEmail("-fsrijr34729HIUHIY@gmail.com"));
 console.log(checkEmail("_sgsu34242-fsi@gmail.com"));
 console.log(checkEmail("dfg-sdf-sdsf-@gmail.com"))
+
+
+//TASK7
