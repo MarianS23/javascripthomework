@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+  <!--------------------------TASK 1 ------------------------------------->
+  <script> 
+     let openNewWindow = window.open("","","width=300,height=300")
+               setTimeout(function(){
+	                  openNewWindow.resizeTo(500,500);
+               },2000);
+               setTimeout(function(){
+	                  openNewWindow.moveTo(200,200);
+               },4000);
+               setTimeout(function(){
+	                  openNewWindow.close();
+               },6000);
+  </script>
+  
+  <!--------------------------TASK 2 ------------------------------------->
+  <script>
+        function changeCSS() {
+	           text.style.color ="orange";
+	           text.style.fontSize ="20pt";
+	           text.style.fontFamily = "Comic Sans MS";
+        }
+  </script>
+  
+  <!--------------------------TASK 3 ------------------------------------->
+     <button onclick="changeBackground('blue')">Click to make blue</button>
+     <button ondblclick="changeBackground('pink')">Click to make pink</button>
+     <button onmousedown="changeBackground('brown')" onmouseup="changeBackground('white')">hold to change color</button>
+     <a href = "#" onmouseover="changeBackground('yellow')"
+                   onmouseout="changeBackground('white')">put on to make page yellow</a>
+  
+  <script>
+    function changeBackground(color){
+	     document.body.style.backgroundColor = color
+    }
+  </script>
+<!--------------------------TASK 4 ------------------------------------->
+ <form>
+    <select id="names">
+      <option>ivan</option>
+      <option>petro</option>
+      <option>stepan</option>
+      <option>andrij</option>
+      <option>sergiy</option>
+    </select>
+    <input type="button"  id="Btn" value="delete">
+</form>
+  <script>
+    Btn.addEventListener("click",deleteFunction);
+    function deleteFunction() {
+  	let a = document.getElementById("names");
+  	a.remove(a.selectedIndex);
+  }
+  </script>
+  
+  <!--------------------------TASK 5 ------------------------------------->
+  <button id="button">live button</button>
+  <p id="parag"></p>
+  
+  <script>
+    let a = document.getElementById("button");
+         a.addEventListener("mouseover",mouseOver);
+         a.addEventListener("ckick",mouseClick);
+         a.addEventListener("mouseout",mouseOut);
+
+         function mouseOver(){
+         	document.getElementById("parag").innerHTML +="mouse on me";
+         }
+         function mouseClick(){
+         	document.getElementById("parag").innerHTML +="pressed";
+         }
+
+         function mouseOut(){
+         	document.getElementById("parag").innerHTML +="mouse is not on me";
+         }
+  </script>
+   <!--------------------------TASK 6 ------------------------------------->
+  <div id="size"></div>;
+  <script>
+    function showWindowSize(){
+	    let width = window.innerWidth;
+	    let height = window.innerHeight;
+	    document.getElementById("size").innerHTML= `Width: ${width} , Height: ${height}`;
+    }
+
+    window.addEventListener("resize",showWindowSize);  
+  </script>
+  <!--------------------------TASK 7 ------------------------------------->
+  
+  
+  
+  
+  
+  
+  
+  </body>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
