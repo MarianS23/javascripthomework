@@ -108,3 +108,9 @@ console.log(checkEmail("dfg-sdf-sdsf-@gmail.com"))
 
 
 //TASK7
+function checkLogin(login){
+    const re = /^[a-zA-Z]{1}[a-zA-Z0-9\.]{1,9}$/;
+    const number = /[0-9\.]+/g;
+    const resultNum = login.match(number);
+    const result = re.test(login);
+    console.log(`${login} is ${result}-${resultNum}`)
