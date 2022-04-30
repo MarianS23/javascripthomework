@@ -41,13 +41,14 @@ console.log(checkEmail(userEmail2));  false
 console.log(checkEmail(userEmail3));   true
 
 
-//TASK 3                              так і не розібрався як то зробити
-let str = "cdbBdbsbz" ; //
+//TASK 3                           
+let str = "cdbBdbsbz";
 
-function checkStr (string){
-   let regExp = /  /;
-   return str.match(regExp);
+function checkStr(){
+    let reg = /d(b+)(d)/i;
+    return str.match(reg);
 };
+
 
 
 
