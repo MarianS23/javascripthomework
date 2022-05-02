@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>my progect</title>
+	
+</head>
+<body>
+ 
+              <!-------TASK1---------->
+ <div>
+   <a href="https://gmail.com">link</a>
+   $("a[href^='https://']").attr("target","_blank");
+  
+   
+   TASK2
+
+
+<h2 class="head">header1</h2>
+<h2 class="head">header2<span class="inner">inner elem</span></h2>
+<h2>header3</h2>;
+<h2 class="head">header4<span>inner elem 2 </span></h2>;
+<h2>header5</h2>;
+
+$('h2.head').css('background','green').find('.inner').css('fontSize','35px');
+
+___________________________________________________________________________________
+TASK3
+
+<h3>header1</h3>
+<div>text1</div>
+<h3>header2</h3>
+<div>text2</div>
+
+$("h3+div").each(funtion(){
+	const $divElem = $(this);
+	console.log(this);
+	$divElems.prev().before($divElems);
+});
+
+
+_________________________________________________________________________
+TASK 4 
+<input type="checkbox">
+<input type="checkbox">
+<input type="checkbox">
+<input type="checkbox">
+<input type="checkbox">
+<input type="checkbox">
+
+const $checkboxes = $(':checkbox');
+$checkboxes.on('ckick',function(){
+	if($(':checkbox:checked').length == 3){
+		$checkbox.attr('disabled','true');
+	}
+})
+  </body>
